@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClickTo3D — Plan to 3D in one click for Revit</title>
+<meta name="description" content="Free Revit add-in, approved on the Autodesk App Store. Click any spot in a Revit plan and a focused 3D view opens right there. Revit 2024–2027.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://clickto3d.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ClickTo3D — Plan to 3D in one click">
+<meta property="og:description" content="Free Revit add-in. Click a spot in your plan and a focused 3D view opens right there.">
+<meta property="og:url" content="https://clickto3d.com/">
+<meta property="og:image" content="https://clickto3d.com/images/clickto3d-2d-to-3d.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+body{margin:0}
+:root{--bg:#F0F0F0;--bar:#F9F9F9;--tx:#1B1B1B;--t2:#5F6368;--ln:#E1E1E1;--bd:#C3C8CF;--card:#FFFFFF;--ac:#5D75A5;--so:#9DB0D8;--lg-o:#1447D0;--rb-panel:#F5F5F5;--rb-strip:#DCDCDC;--rb-hl:#E6E6E6;--rb-sel:#E6E6E6;--lg-sp:#7FA0E6;--lg-f:#7389BB;--lg-s:#0D2E84}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#2B2B2B;--bar:#323232;--tx:#E6E6E6;--t2:#A8A8A8;--ln:#3C3C3C;--bd:#575757;--card:#323232;--ac:#8EA3CF;--so:#7E93C2;--lg-o:#8FB0FF;--rb-panel:#3B3B3B;--rb-strip:#262626;--rb-hl:#474747;--rb-sel:#4A4A4A;--lg-sp:#6F87C2;--lg-f:#7D95CC;--lg-s:#DCE6FF}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#2B2B2B;--bar:#323232;--tx:#E6E6E6;--t2:#A8A8A8;--ln:#3C3C3C;--bd:#575757;--card:#323232;--ac:#8EA3CF;--so:#7E93C2;--lg-o:#8FB0FF;--rb-panel:#3B3B3B;--rb-strip:#262626;--rb-hl:#474747;--rb-sel:#4A4A4A;--lg-sp:#6F87C2;--lg-f:#7D95CC;--lg-s:#DCE6FF}
+.only-dark{display:none!important}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .only-dark{display:block!important}:root:not([data-theme="light"]) .only-light{display:none!important}}
+:root[data-theme="dark"] .only-dark{display:block!important}:root[data-theme="dark"] .only-light{display:none!important}
+a{color:var(--tx)}a:hover{color:var(--ac)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+img{max-width:100%}
+@media (max-width:640px){h1{font-size:52px!important}}
+</style>
+</head>
+<body>
+<div style="background: var(--bg); color: var(--tx); font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; min-height: 100vh; display: flex; flex-direction: column">
+<header style="background: var(--bar); border-bottom: 1px solid var(--ln)"><div style="max-width: 1200px; margin: 0 auto; padding: 12px 32px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between"><a href="/" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 17px; text-decoration: none; color: var(--tx)"><svg width="26" height="26" viewBox="0 0 1016 1000" aria-hidden="true" style="display: block"><polygon points="508,5 908,245 908,750 508,995 108,750 108,245" fill="none" stroke="var(--lg-o)" stroke-width="18" stroke-linejoin="round"></polygon>
+<g stroke="var(--lg-sp)" stroke-width="7"><line x1="508" y1="5" x2="508" y2="340"></line><line x1="908" y1="245" x2="636" y2="418"></line><line x1="908" y1="750" x2="636" y2="578"></line><line x1="508" y1="995" x2="508" y2="657"></line><line x1="108" y1="750" x2="382" y2="578"></line><line x1="108" y1="245" x2="382" y2="418"></line></g>
+<g fill="var(--lg-f)" stroke="var(--lg-s)" stroke-width="12" stroke-linejoin="round"><polygon points="508,340 636,418 636,578 508,657 382,578 382,418"></polygon><polygon points="508,110 580,260 435,260"></polygon><polygon points="198,305 348,305 275,440"></polygon><polygon points="668,305 818,305 742,440"></polygon><polygon points="275,555 348,690 202,690"></polygon><polygon points="740,555 812,690 668,690"></polygon><polygon points="442,738 578,738 508,870"></polygon></g></svg>ClickTo3D</a></div></header><main>
+<section style="max-width: 1280px; margin: 0 auto; padding: 64px 32px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center"><div style="flex: 1 1 420px"><h1 style="margin: 28px 0 0; font-size: 76px; line-height: 0.98; font-weight: 600; letter-spacing: -0.03em">Plan to 3D.<br><span style="color: var(--t2)">One click.</span></h1>
+<p style="margin: 22px 0 0; font-size: 18px; line-height: 1.6; color: var(--t2); max-width: 440px">Click any spot in a Revit plan and a focused 3D view opens right there.</p>
+<div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center"><a href="https://marketplace.autodesk.com/apps/c0fd3725-27a5-4e44-8148-366f50634eae?priceId=07099ece-b33a-4eb6-adb0-7833f87040a1" target="_blank" rel="noopener" style="display: inline-block; padding: 12px 24px; background: #4F6596; color: #FFFFFF; border: 1px solid #4F6596; border-bottom-color: #3E5280; border-radius: 4px; text-decoration: none; font-size: 15px">Get it free on Autodesk App Store ↗</a><a href="https://marketplace.autodesk.com/apps/c0fd3725-27a5-4e44-8148-366f50634eae?priceId=07099ece-b33a-4eb6-adb0-7833f87040a1" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--bd); background: var(--card); border-radius: 4px; padding: 5px 12px; text-decoration: none; font-size: 13px; color: var(--tx)"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="var(--ac)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>Approved by Autodesk · Autodesk App Store ↗</a></div>
+<p style="margin: 14px 0 0"><span style="font-size: 13px; color: var(--t2)">Free · Revit 2024 · 2025 · 2026 · 2027</span></p></div><div style="flex: 1.4 1 560px"><div style="border: 1px solid var(--bd); border-radius: 4px; overflow: hidden; background: var(--card)"><img src="images/clickto3d-2d-to-3d.jpg" alt="A 2D Revit floor plan with a selected area, and the same area opened as a boxed 3D view" style="display: block; width: 100%; height: auto"></div><div style="margin-top: 16px; display: flex; align-items: stretch; background: var(--card); border: 1px solid var(--bd); border-radius: 4px; overflow: hidden"><div style="flex: 0 0 auto; width: 100px; padding: 18px 0 18px; text-align: center; color: var(--tx); background: var(--rb-panel); border-right: 1px solid var(--bd)" role="img" aria-label="The ClickTo3D button on the Revit ribbon"><svg width="44" height="44" viewBox="0 0 1016 1000" aria-hidden="true" style="display: block; margin: 0 auto"><polygon points="508,5 908,245 908,750 508,995 108,750 108,245" fill="none" stroke="var(--lg-o)" stroke-width="18" stroke-linejoin="round"></polygon>
+<g stroke="var(--lg-sp)" stroke-width="7"><line x1="508" y1="5" x2="508" y2="340"></line><line x1="908" y1="245" x2="636" y2="418"></line><line x1="908" y1="750" x2="636" y2="578"></line><line x1="508" y1="995" x2="508" y2="657"></line><line x1="108" y1="750" x2="382" y2="578"></line><line x1="108" y1="245" x2="382" y2="418"></line></g>
+<g fill="var(--lg-f)" stroke="var(--lg-s)" stroke-width="12" stroke-linejoin="round"><polygon points="508,340 636,418 636,578 508,657 382,578 382,418"></polygon><polygon points="508,110 580,260 435,260"></polygon><polygon points="198,305 348,305 275,440"></polygon><polygon points="668,305 818,305 742,440"></polygon><polygon points="275,555 348,690 202,690"></polygon><polygon points="740,555 812,690 668,690"></polygon><polygon points="442,738 578,738 508,870"></polygon></g></svg><div style="margin-top: 14px; font-size: 13px">ClickTo3D</div><svg width="9" height="5" viewBox="0 0 13 8" aria-hidden="true" style="display: block; margin: 26px auto 0"><path d="M0 0 H13 L6.5 8 Z" fill="var(--tx)"></path></svg></div><p style="margin: 0; padding: 0 20px; align-self: center; font-size: 14px; color: var(--t2); line-height: 1.6">Launch from the Add-Ins ribbon, a hotkey, or a programmed mouse button.<br>Settings are under the arrow.</p></div></div></section>
+<section id="updates" style="max-width: 1200px; margin: 0 auto; padding: 64px 32px 64px">
+<div style="border-top: 1px solid var(--ln); padding-top: 40px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
+<div><h2 style="margin: 0 0 6px; font-size: 18px; font-weight: 600">Get notified about new apps</h2><p style="margin: 0; font-size: 14px; color: var(--t2)">One email when something new is released.</p></div>
+<form id="notify-form" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center"><input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px"><label style="position: absolute; left: -9999px" for="upd-email">Email</label><input id="upd-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" style="width: 260px; padding: 9px 12px; border: 1px solid var(--bd); border-radius: 4px; background: var(--card); color: var(--tx); font: inherit; font-size: 14px"><button type="submit" style="padding: 9px 18px; background: var(--card); color: var(--tx); border: 1px solid var(--so); border-radius: 4px; font: inherit; font-size: 14px; cursor: pointer">Notify me</button><p id="notify-msg" role="status" style="margin: 0; width: 100%; font-size: 14px; color: var(--t2)"></p></form>
+</div>
+</section>
+
+</main><footer style="margin-top: auto; border-top: 1px solid var(--ln); background: var(--bar)"><div style="max-width: 1200px; margin: 0 auto; padding: 24px 32px; display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; font-size: 13px; color: var(--t2)"><span>© 2026 ClickTo3D</span><span style="display: flex; gap: 20px"><a href="https://marketplace.autodesk.com/apps/c0fd3725-27a5-4e44-8148-366f50634eae?priceId=07099ece-b33a-4eb6-adb0-7833f87040a1" target="_blank" rel="noopener" style="color: var(--t2)">Autodesk App Store</a><a href="mailto:clickto3d@gmail.com" style="color: var(--t2)">clickto3d@gmail.com</a><a href="privacy.html" style="color: var(--t2)">Privacy policy</a></span></div></footer>
+</div>
+<script>
+// Paste your Apps Script web app URL here (ends with /exec)
+const SIGNUP_URL = "https://script.google.com/macros/s/AKfycbzZq75J_xw1zSpodVH5QQy82oSCxKLtQIjtAy95Q-0P6LUMwNj8iG_-0K3bpYJmjohZhg/exec";
+
+(function () {
+  const form = document.getElementById("notify-form");
+  const msg = document.getElementById("notify-msg");
+  const btn = form.querySelector("button");
+  let pendingId = null;            // reused on retry so a retry never creates a duplicate
+  let pendingEmail = null;
+
+  const newId = () => (crypto.randomUUID ? crypto.randomUUID() : Date.now() + "-" + Math.random().toString(16).slice(2));
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  async function withTimeout(promise, ms) {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), ms);
+    try { return await promise(ctrl.signal); } finally { clearTimeout(t); }
+  }
+
+  async function send(payload) {
+    // text/plain + no cookies = "simple" request: no CORS preflight, no Google account cookies involved
+    const res = await withTimeout((signal) => fetch(SIGNUP_URL, {
+      method: "POST", body: JSON.stringify(payload), credentials: "omit",
+      headers: { "Content-Type": "text/plain;charset=utf-8" }, redirect: "follow", signal
+    }), 15000);
+    return res.json();             // throws if the response can't be read
+  }
+
+  async function confirm(id) {
+    // Bounded fallback: ask the server whether this exact ID was saved
+    for (let i = 0; i < 3; i++) {
+      try {
+        const r = await withTimeout((signal) => fetch(SIGNUP_URL + "?check=" + encodeURIComponent(id), { credentials: "omit", signal }), 8000);
+        const j = await r.json();
+        if (j.saved === true) return "saved";
+        if (j.saved === false) return "missing";
+      } catch (e) {}
+      await wait(1500);
+    }
+    return "unknown";
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = form.email.value.trim();
+    if (email !== pendingEmail) { pendingId = newId(); pendingEmail = email; }
+    btn.disabled = true; msg.textContent = "Saving…";
+    const payload = { id: pendingId, email, website: (form.website ? form.website.value : ""), source: "clickto3d.com" };
+
+    let result;
+    try {
+      const j = await send(payload);
+      result = j.ok ? "saved" : (j.error === "invalid email" ? "invalid" : "failed");
+    } catch (err) {
+      result = await confirm(pendingId);   // network/CORS/timeout: verify instead of guessing
+    }
+
+    if (result === "saved") {
+      form.reset(); pendingId = null; pendingEmail = null;
+      msg.textContent = "You’re on the list. We’ll email you when a new app is released.";
+    } else if (result === "invalid") {
+      msg.textContent = "That email address doesn’t look right. Check it and try again.";
+    } else if (result === "unknown") {
+      msg.textContent = "We couldn’t confirm your sign-up. Click Notify me again. It won’t add you twice.";
+    } else {
+      msg.textContent = "Your email wasn’t saved. Click Notify me to try again.";
+    }
+    btn.disabled = false;
+  });
+})();
+</script>
+</body>
+</html>
