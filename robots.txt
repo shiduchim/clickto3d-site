@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://clickto3d.com/sitemap.xml
