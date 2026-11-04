@@ -28,13 +28,16 @@ html{-webkit-text-size-adjust:100%}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
 img{max-width:100%}
 @media (max-width:640px){h1{font-size:52px!important}}
+.nav{display:flex;gap:20px;margin-left:auto;font-size:14px}
+.nav a{color:var(--t2);text-decoration:none}.nav a:hover{color:var(--ac)}.nav a[aria-current="page"]{color:var(--tx);font-weight:600}
+@media (max-width:640px){.nav{order:3;width:100%;margin-left:0}}
 </style>
 </head>
 <body>
 <div style="background: var(--bg); color: var(--tx); font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; min-height: 100vh; display: flex; flex-direction: column">
 <header style="background: var(--bar); border-bottom: 1px solid var(--ln)"><div style="max-width: 1280px; margin: 0 auto; padding: 12px 32px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between"><a href="/" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 17px; text-decoration: none; color: var(--tx)"><svg width="26" height="26" viewBox="0 0 1016 1000" aria-hidden="true" style="display: block"><polygon points="508,5 908,245 908,750 508,995 108,750 108,245" fill="none" stroke="var(--lg-o)" stroke-width="18" stroke-linejoin="round"></polygon>
 <g stroke="var(--lg-sp)" stroke-width="7"><line x1="508" y1="5" x2="508" y2="340"></line><line x1="908" y1="245" x2="636" y2="418"></line><line x1="908" y1="750" x2="636" y2="578"></line><line x1="508" y1="995" x2="508" y2="657"></line><line x1="108" y1="750" x2="382" y2="578"></line><line x1="108" y1="245" x2="382" y2="418"></line></g>
-<g fill="var(--lg-f)" stroke="var(--lg-s)" stroke-width="12" stroke-linejoin="round"><polygon points="508,340 636,418 636,578 508,657 382,578 382,418"></polygon><polygon points="508,110 580,260 435,260"></polygon><polygon points="198,305 348,305 275,440"></polygon><polygon points="668,305 818,305 742,440"></polygon><polygon points="275,555 348,690 202,690"></polygon><polygon points="740,555 812,690 668,690"></polygon><polygon points="442,738 578,738 508,870"></polygon></g></svg>ClickTo3D</a><span lang="he" dir="rtl" style="font-size: 13px; color: var(--t2)">ב״ה</span></div></header>
+<g fill="var(--lg-f)" stroke="var(--lg-s)" stroke-width="12" stroke-linejoin="round"><polygon points="508,340 636,418 636,578 508,657 382,578 382,418"></polygon><polygon points="508,110 580,260 435,260"></polygon><polygon points="198,305 348,305 275,440"></polygon><polygon points="668,305 818,305 742,440"></polygon><polygon points="275,555 348,690 202,690"></polygon><polygon points="740,555 812,690 668,690"></polygon><polygon points="442,738 578,738 508,870"></polygon></g></svg>ClickTo3D</a><nav class="nav" aria-label="Add-ins"><a href="/">ClickTo3D</a><a href="/clicktosection/">ClickToSection</a></nav><span lang="he" dir="rtl" style="font-size: 13px; color: var(--t2)">ב״ה</span></div></header>
 <main style="max-width: 760px; margin: 0 auto; padding: 64px 32px 80px; width: 100%">
 <h1 style="margin: 0 0 8px; font-size: 40px; font-weight: 600">ClickTo3D Privacy Policy</h1>
 <p style="margin: 0 0 32px; color: var(--t2)">Last Updated: October 31, 2026</p>
@@ -63,7 +66,7 @@ img{max-width:100%}
 <h2 style="margin: 36px 0 12px; font-size: 20px; font-weight: 600">Changes to This Privacy Policy</h2>
 <p style="margin: 0 0 14px; line-height: 1.7; color: var(--t2)">If a future version of ClickTo3D introduces functionality that changes how information is collected, stored, transmitted, or shared, this Privacy Policy will be updated accordingly.</p>
 </main>
-<footer style="margin-top: auto; border-top: 1px solid var(--ln); background: var(--bar)"><div style="max-width: 1280px; margin: 0 auto; padding: 24px 32px; display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; font-size: 13px; color: var(--t2)"><span>© 2026 ClickTo3D</span><span style="display: flex; gap: 20px"><a href="https://marketplace.autodesk.com/apps/c0fd3725-27a5-4e44-8148-366f50634eae?priceId=07099ece-b33a-4eb6-adb0-7833f87040a1" target="_blank" rel="noopener" style="color: var(--t2)">Autodesk App Store</a><a href="mailto:clickto3d@gmail.com" style="color: var(--t2)">clickto3d@gmail.com</a><a href="/privacy-policy" style="color: var(--t2)">Privacy policy</a></span></div></footer>
+<footer style="margin-top: auto; border-top: 1px solid var(--ln); background: var(--bar)"><div style="max-width: 1280px; margin: 0 auto; padding: 24px 32px; display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; font-size: 13px; color: var(--t2)"><span>© 2026 ClickTo3D</span><span style="display: flex; flex-wrap: wrap; gap: 8px 20px"><a href="https://marketplace.autodesk.com/apps/c0fd3725-27a5-4e44-8148-366f50634eae?priceId=07099ece-b33a-4eb6-adb0-7833f87040a1" target="_blank" rel="noopener" style="color: var(--t2)">Autodesk App Store</a><a href="mailto:clickto3d@gmail.com" style="color: var(--t2)">clickto3d@gmail.com</a><a href="/privacy-policy" style="color: var(--t2)">Privacy policy</a><a href="/clicktosection/privacy-policy" style="color: var(--t2)">ClickToSection privacy</a></span></div></footer>
 </div>
 </body>
 </html>
