@@ -48,6 +48,7 @@ Owner: Eliyahu (BIM designer, builds Revit tools). Support email: clickto3d@gmai
 
 ## Working agreement
 - Show a preview/screenshot and get the owner's OK before committing anything that goes live.
+- Once the owner approves a preview, commit and push straight to `main` so it goes live (no PR, no separate branch).
 - The owner prefers step-by-step instructions, one step at a time.
 
 ## Full handoff
