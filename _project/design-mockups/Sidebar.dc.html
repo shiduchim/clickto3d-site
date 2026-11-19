@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mikdsh — Sidebar</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1C1C1A}a:hover{color:{{accent}}}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1100px; background: #FBFBF9; color: #1C1C1A; font-family: Inter, system-ui, sans-serif">
+<aside style="flex: 0 0 260px; box-sizing: border-box; background: #F2F1EC; border-right: 1px solid #E3E1DA; padding: 24px 16px; display: flex; flex-direction: column; gap: 28px">
+<a href="#" style="font-weight: 600; font-size: 18px; text-decoration: none; padding: 0 12px">mikdsh</a>
+<nav style="display: flex; flex-direction: column; gap: 2px; font-size: 15px">
+<p style="margin: 0 0 6px; padding: 0 12px; font-size: 12px; color: #6A6860">Apps</p>
+<a href="#" style="text-decoration: none; padding: 10px 12px; border-radius: 8px; background: #E6E4DC; font-weight: 500">ClickTo3D</a>
+<a href="#" style="text-decoration: none; padding: 10px 12px; border-radius: 8px">QuickSection</a>
+<a href="#" style="text-decoration: none; padding: 10px 12px; border-radius: 8px">Last Similar</a>
+<a href="#" style="text-decoration: none; padding: 10px 12px; border-radius: 8px">Print</a>
+<a href="#" style="text-decoration: none; padding: 10px 12px; border-radius: 8px">HDsnip</a>
+<a href="#" style="text-decoration: none; padding: 10px 12px; border-radius: 8px">Script Launcher</a>
+<a href="#" style="text-decoration: none; padding: 10px 12px; border-radius: 8px; color: #6A6860">Recorder · soon</a>
+</nav>
+<nav style="display: flex; flex-direction: column; gap: 2px; font-size: 15px">
+<p style="margin: 0 0 6px; padding: 0 12px; font-size: 12px; color: #6A6860">Company</p>
+<a href="#" style="text-decoration: none; padding: 10px 12px">For firms</a>
+<a href="#" style="text-decoration: none; padding: 10px 12px">About</a>
+<a href="#" style="text-decoration: none; padding: 10px 12px">Contact</a>
+</nav>
+</aside>
+<main style="flex: 1 1 400px; box-sizing: border-box; padding: 80px 64px; max-width: 760px">
+<p style="margin: 0 0 12px; font-size: 13px; color: #6A6860">Revit add-in · Free · Autodesk App Store</p>
+<h1 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 1.1">ClickTo3D</h1>
+<p style="margin: 20px 0 0; font-size: 18px; line-height: 1.65; color: #3A3934">Click in a plan and land in the 3D view of that spot. Works in Revit 2024, 2025, 2026 and 2027.</p>
+<div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#" style="background: {{accent}}; color: #FFFFFF; text-decoration: none; padding: 13px 22px; border-radius: 8px; font-weight: 500">Download</a>
+<a href="#" style="border: 1px solid #D6D3CA; text-decoration: none; padding: 13px 22px; border-radius: 8px; font-weight: 500">Read the docs</a>
+</div>
+<div style="margin-top: 48px; background: #EFEDE7; border-radius: 12px; height: 380px; display: flex; align-items: center; justify-content: center; color: #6A6860">[Screenshot or short video]</div>
+<h2 style="margin: 56px 0 12px; font-size: 18px; font-weight: 600">For firms</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3A3934">One-click install on IT-managed PCs. Pure C# with no third-party code. Team and site licenses available. <a href="#">Get a quote</a>.</p>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#A9492A"},"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#A9492A' };
+}
+}
+</script>
+</body>
+</html>

@@ -50,5 +50,10 @@ Owner: Eliyahu (BIM designer, builds Revit tools). Support email: clickto3d@gmai
 - Show a preview/screenshot and get the owner's OK before committing anything that goes live.
 - The owner prefers step-by-step instructions, one step at a time.
 
+## Full handoff
+- `_project/HANDOFF.md` — full handoff (accounts, DNS table, files, design tokens, sign-up system, to-dos).
+- `_project/HISTORY.md` — every design round and decision, and why.
+- `_project/` also has logos, screenshots, settings-window images, the Apps Script backend code, the UI style guide, and all design mockups. Folders starting with `_` are not published by GitHub Pages, but the repo is public: never commit passwords, the Google Sheet link/ID, or contact lists.
+
 ## Related
 The ClickCRM project (GitHub Pages + Apps Script/Sheets, Google Sign-In token check) has its own handoff doc in the ClickTo3D Project.
