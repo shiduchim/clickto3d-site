@@ -72,7 +72,8 @@ If GitHub's DNS check is stuck: Settings → Pages → Remove domain → re-add 
 |---|---|
 | `index.html` | Whole home page. Inline CSS with CSS variables for light/dark mode. Sign-up script at the bottom. |
 | `privacy-policy/index.html` | Official ClickTo3D Privacy Policy. **URL is in the Autodesk listing — never move it.** |
-| `privacy.html` | Meta-refresh redirect to `/privacy-policy` (kept for old links). |
+| `privacy.html` | Privacy list page at `/privacy` (single footer link) → ClickTo3D, ClickToSection, ClickPrint policies. |
+| `clickprint/privacy-policy/index.html` | ClickPrint privacy policy (URL used in its Autodesk listing — never move it). |
 | `images/clickto3d-2d-to-3d.jpg` | Hero graphic, 1400px wide, ~95 KB. Title area cropped off; equal top/bottom margins. |
 | `favicon.svg` | Logo (light colors). |
 | `sitemap.xml`, `robots.txt` | For search engines. Update `lastmod` in sitemap when pages change. |

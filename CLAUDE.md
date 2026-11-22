@@ -17,7 +17,7 @@ Owner: Eliyahu (BIM designer, builds Revit tools). Support email: clickto3d@gmai
 ## Files
 - `index.html` — the whole home page (inline CSS, light + dark mode via `prefers-color-scheme`).
 - `privacy-policy/index.html` — official ClickTo3D privacy policy, served at `/privacy-policy`. This URL is in the Autodesk App Store listing — never change it.
-- `privacy.html` — redirect to `/privacy-policy` only.
+- `privacy.html` — privacy list page at `/privacy` (the single footer "Privacy" link). Links to each app policy: `/privacy-policy` (ClickTo3D), `/clicktosection/privacy-policy`, `/clickprint/privacy-policy`. These policy URLs are in Autodesk listings — never change them.
 - `images/clickto3d-2d-to-3d.jpg` — main 2D→3D graphic (title cropped off, equal margins top/bottom).
 - `favicon.svg`, `sitemap.xml`, `robots.txt`, `CNAME`.
 - Autodesk listing: https://marketplace.autodesk.com/apps/c0fd3725-27a5-4e44-8148-366f50634eae?priceId=07099ece-b33a-4eb6-adb0-7833f87040a1
