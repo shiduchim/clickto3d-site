@@ -9,7 +9,7 @@ The short rules for Claude live in `/CLAUDE.md` at the repo root; this file is t
 
 ---
 
-## 1. Current state (Nov 19, 2026)
+## 1. Current state (Nov 25, 2026)
 
 | Item | Status |
 |---|---|
@@ -17,6 +17,9 @@ The short rules for Claude live in `/CLAUDE.md` at the repo root; this file is t
 | HTTPS | ✅ Certificate active, **Enforce HTTPS** ticked |
 | `www.clickto3d.com` | ✅ CNAME → `shiduchim.github.io` (GitHub redirects to bare domain) |
 | Privacy policy | ✅ https://clickto3d.com/privacy-policy (matches Autodesk listing) |
+| Privacy list page | ✅ https://clickto3d.com/privacy — single footer link, lists ClickTo3D / ClickToSection / ClickPrint |
+| ClickPrint policy | ✅ https://clickto3d.com/clickprint/privacy-policy (for the ClickPrint listing; help planned at `/clickprint/help`) |
+| SEO (Nov 25) | ✅ JSON-LD, own descriptions, trailing-slash canonicals, sitemap resubmitted (5 pages), indexing requested for /, /privacy, /privacy-policy/, /clickprint/privacy-policy/ |
 | Email sign-up | ✅ Works end to end, no duplicates, works with multiple Google accounts |
 | Google Search Console | ✅ Domain verified (auto, via existing TXT), sitemap submitted, indexing requested |
 | Old Google Sites page | To unpublish (nothing points to it anymore) |
@@ -78,7 +81,8 @@ If GitHub's DNS check is stuck: Settings → Pages → Remove domain → re-add 
 | `favicon.svg` | Logo (light colors). |
 | `sitemap.xml`, `robots.txt` | For search engines. Update `lastmod` in sitemap when pages change. |
 | `CNAME` | `clickto3d.com` — don't delete or the custom domain breaks. |
-| `CLAUDE.md` | Rules for Claude (not published). |
+| `CLAUDE.md` | Rules for Claude. Kept off the site by `_config.yml` (`exclude: [CLAUDE.md]`). |
+| `_config.yml` | Jekyll exclude list. Don't add `.nojekyll` — it would publish `_project/`. |
 | `_project/` | This handoff, history, assets, backend code, design mockups (not published). |
 
 Updating: edit + commit to `main` → live in 1–2 minutes (watch the yellow dot → green check next to the commit).
@@ -92,7 +96,7 @@ If the browser shows the old version: Ctrl + F5 or incognito.
 
 **Hero (left):**
 - H1: "Plan to 3D." / "One click." (second line grey)
-- "Click any spot in a Revit plan and a focused 3D view opens right there."
+- "ClickTo3D is a free Revit add-in. Click any spot in a plan and a focused 3D view opens right there." (brand + "Revit add-in" in visible text, for search)
 - Button: "Get it free on Autodesk App Store" → listing (filled slate #4F6596)
 - Badge: "✓ Approved by Autodesk · Autodesk App Store" → listing
 - "Free · Revit 2024 · 2025 · 2026 · 2027"
@@ -105,7 +109,7 @@ box size and 3D view name."
 **Get notified about new apps:** "One email when something new is released." + email box + "Notify me" (outlined
 slate, like the add-in's Save button), grouped on the left.
 
-**Footer:** "© 2026 ClickTo3D" · Autodesk App Store · clickto3d@gmail.com · Privacy policy.
+**Footer (all pages):** "© 2026 ClickTo3D" · clickto3d@gmail.com · Autodesk App Store (publisher profile) · Privacy (→ `/privacy`).
 
 ---
 
@@ -170,6 +174,11 @@ The owner deliberately does **not** want to mention Google Sheets, who has acces
 ---
 
 ## 9. Open to-dos
+
+- [ ] Add `https://clickto3d.com` as Website on the Autodesk publisher profile (strongest fix for Google auto-correcting "clickto3d" → "click 3d"). Also GitHub repo Website field, LinkedIn etc.
+- [ ] ClickPrint help page at `/clickprint/help` (when owner sends content).
+- [ ] Optional (need owner OK): custom 404 page; dark-mode favicon; 1200×630 og image; phone-readable hero graphic captions.
+- [ ] Watch Search Console for "clickto3d" impressions.
 
 - [ ] Unpublish old Google Sites page (sites.google.com/view/clickto3d-com).
 - [ ] Delete test rows from the sign-up sheet.

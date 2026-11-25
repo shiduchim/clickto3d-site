@@ -104,6 +104,21 @@ Refinements to C, in order:
 - This `_project/` folder added with the full handoff, history, assets, backend code, and design mockups.
 - A later session also added `clicktosection/` (privacy policy + favicon for the ClickToSection add-in).
 
+## 6b. Privacy hub, ClickPrint, audit (Nov 21–25, 2026)
+
+- Footer had two privacy links; a third app (ClickPrint) was coming. Decided (checked with a second model): keep each
+  policy at its own URL (Autodesk listings must go straight to the product policy), and turn `privacy.html` into a
+  list page at `/privacy`. Footer now has one "Privacy" link. `/privacy-policy` unchanged.
+- Third app was first called ClickToPrint, renamed **ClickPrint** → `/clickprint/privacy-policy`. Owner supplied the
+  text; second version removed the error-log mention ("saves only its settings"). Date format "22 November 2026".
+- Google auto-corrected "clickto3d" to "click 3d"; `site:` search showed the site was indexed — a new-brand problem.
+- Full audit (UI, SEO, accessibility). Fixed: CLAUDE.md was published as /CLAUDE.html (now excluded via
+  `_config.yml`); ClickTo3D privacy page had the home page's description/og tags; JSON-LD added; canonicals/sitemap
+  with trailing slash; hero image width/height; phone H1 size on privacy pages (34px, like the sibling pages);
+  iPhone zoom on email box (16px on phones); placeholder contrast; footer tap targets; favicon metadata stripped
+  (8.7KB → 0.9KB); all policies now "Last updated: D Month YYYY". Hero sentence now names "ClickTo3D … Revit add-in".
+- Search Console: sitemap shows 5 pages; indexing requested for the main pages.
+
 ## 7. Related projects (not in this repo)
 
 - **ClickCRM** — private sales CRM (GitHub Pages frontend + Apps Script/Sheets backend in clickto3d@gmail.com,

@@ -19,7 +19,9 @@ Owner: Eliyahu (BIM designer, builds Revit tools). Support email: clickto3d@gmai
 - `privacy-policy/index.html` — official ClickTo3D privacy policy, served at `/privacy-policy`. This URL is in the Autodesk App Store listing — never change it.
 - `privacy.html` — privacy list page at `/privacy` (the single footer "Privacy" link). Links to each app policy: `/privacy-policy` (ClickTo3D), `/clicktosection/privacy-policy`, `/clickprint/privacy-policy`. These policy URLs are in Autodesk listings — never change them.
 - `images/clickto3d-2d-to-3d.jpg` — main 2D→3D graphic (title cropped off, equal margins top/bottom).
+- `clicktosection/privacy-policy/index.html`, `clickprint/privacy-policy/index.html` — other add-ins' policies (same shell; URLs in their Autodesk listings).
 - `favicon.svg`, `sitemap.xml`, `robots.txt`, `CNAME`.
+- `_config.yml` — Jekyll `exclude: [CLAUDE.md]` so this file is not published (clickto3d.com/CLAUDE.html = 404). Never add `.nojekyll` (it would publish `_project/`).
 - Autodesk listing: https://marketplace.autodesk.com/apps/c0fd3725-27a5-4e44-8148-366f50634eae?priceId=07099ece-b33a-4eb6-adb0-7833f87040a1
 
 ## Design rules (approved — don't change without asking)
@@ -30,9 +32,11 @@ Owner: Eliyahu (BIM designer, builds Revit tools). Support email: clickto3d@gmai
 - Logo: inline SVG hexagon star. Light = original colors; dark mode = "brighter blue" set (#8FB0FF outline, #6F87C2 spokes, #7D95CC fill, #DCE6FF strokes).
 - Header: logo + "ClickTo3D" on the left, small grey "ב״ה" on the right. All sections share max-width 1280px so edges line up.
 - Keep text minimal: no marketing fluff, no FAQ, no settings section, no ↗ arrows on buttons.
-- Hero: "Plan to 3D. / One click.", one sentence, "Get it free on Autodesk App Store" button, "Approved by Autodesk · Autodesk App Store" badge, "Free · Revit 2024 · 2025 · 2026 · 2027".
+- Hero: "Plan to 3D. / One click.", one sentence ("ClickTo3D is a free Revit add-in. Click any spot in a plan and a focused 3D view opens right there."), "Get it free on Autodesk App Store" button, "Approved by Autodesk · Autodesk App Store" badge, "Free · Revit 2024 · 2025 · 2026 · 2027".
 - Under the graphic: boxed bar with the real-proportion ribbon button (icon, "ClickTo3D", small centered ▼) + text: "Launch from the Add-Ins ribbon, a hotkey, or a programmed mouse button. In Settings you can change the default box size and 3D view name."
 - "Get notified about new apps": heading, email box and button grouped together on the left.
+- Footer: © 2026 ClickTo3D · clickto3d@gmail.com · Autodesk App Store (publisher profile) · one "Privacy" link → `/privacy`.
+- SEO: home has JSON-LD (Organization, WebSite, SoftwareApplication) + og:site_name; each page has its own description, self-canonical with trailing slash for folder pages (`/privacy-policy/`), sitemap uses the same. Update sitemap `lastmod` when a page changes.
 - Privacy section 5 says only: we collect the email you enter; unsubscribe by writing to clickto3d@gmail.com. Never mention Google Sheets or who can access data.
 
 ## Email sign-up ("Notify me")
