@@ -1,7 +1,7 @@
 # clickto3d.com — project notes for Claude
 
 ## What this is
-Single-product website for **ClickTo3D**, a free Revit add-in (Revit 2024–2027), approved and published on the Autodesk App Store.
+Website for two free Revit add-ins (Revit 2024–2027), both published on the Autodesk App Store and shown as **equal main products** on the home page: **ClickTo3D** (plan → 3D) and **ClickToSection** (plan → section, live since Nov 26, 2026). Site/brand name stays ClickTo3D.
 Owner: Eliyahu (BIM designer, builds Revit tools). Support email: clickto3d@gmail.com.
 
 ## Hosting
@@ -19,10 +19,12 @@ Owner: Eliyahu (BIM designer, builds Revit tools). Support email: clickto3d@gmai
 - `privacy-policy/index.html` — official ClickTo3D privacy policy, served at `/privacy-policy`. This URL is in the Autodesk App Store listing — never change it.
 - `privacy.html` — privacy list page at `/privacy` (the single footer "Privacy" link). Links to each app policy: `/privacy-policy` (ClickTo3D), `/clicktosection/privacy-policy`, `/clickprint/privacy-policy`. These policy URLs are in Autodesk listings — never change them.
 - `images/clickto3d-2d-to-3d.jpg` — main 2D→3D graphic (title cropped off, equal margins top/bottom).
+- `images/clicktosection-2d-to-section.jpg` — ClickToSection plan→section graphic, cropped from `clicktosection-og.jpg` the same way.
 - `clicktosection/privacy-policy/index.html`, `clickprint/privacy-policy/index.html` — other add-ins' policies (same shell; URLs in their Autodesk listings).
 - `favicon.svg`, `sitemap.xml`, `robots.txt`, `CNAME`.
 - `_config.yml` — Jekyll `exclude: [CLAUDE.md]` so this file is not published (clickto3d.com/CLAUDE.html = 404). Never add `.nojekyll` (it would publish `_project/`).
-- Autodesk listing: https://marketplace.autodesk.com/apps/c0fd3725-27a5-4e44-8148-366f50634eae?priceId=07099ece-b33a-4eb6-adb0-7833f87040a1
+- ClickToSection Autodesk listing: https://marketplace.autodesk.com/apps/6b952ef1-09b6-43fa-8c2a-86a231e1e734?priceId=ba0c6133-6d43-480c-9b76-529bf7c9b9df
+- ClickTo3D Autodesk listing: https://marketplace.autodesk.com/apps/c0fd3725-27a5-4e44-8148-366f50634eae?priceId=07099ece-b33a-4eb6-adb0-7833f87040a1
 
 ## Design rules (approved — don't change without asking)
 - Follows the owner's ClickTo3D settings-window style: Revit neutral greys, Segoe UI, thin borders (#C3C8CF), 4px corners, slate-blue accent, no gradients.
@@ -33,10 +35,11 @@ Owner: Eliyahu (BIM designer, builds Revit tools). Support email: clickto3d@gmai
 - Header: logo + "ClickTo3D" on the left, small grey "ב״ה" on the right. All sections share max-width 1280px so edges line up.
 - Keep text minimal: no marketing fluff, no FAQ, no settings section, no ↗ arrows on buttons.
 - Hero: "Plan to 3D. / One click.", one sentence ("ClickTo3D is a free Revit add-in. Click any spot in a plan and a focused 3D view opens right there."), "Get it free on Autodesk App Store" button, "Approved by Autodesk · Autodesk App Store" badge, "Free · Revit 2024 · 2025 · 2026 · 2027".
+- ClickToSection section (below ClickTo3D, separated by a thin line, same layout and same filled button): "Plan to section." / "Click and pull." (68px so it stays on one line; 44px on phones), "ClickToSection is a free Revit add-in. Click a point in a plan, pull the mouse the way you want to look, and a section opens right there.", "Get it free on Autodesk App Store", Approved badge, "Free · Revit 2024 · 2025 · 2026 · 2027"; ribbon bar: "Launch from the Add-Ins ribbon. Esc or right-click cancels. / In Settings you can change the section size, units and the direction marker."
 - Under the graphic: boxed bar with the real-proportion ribbon button (icon, "ClickTo3D", small centered ▼) + text: "Launch from the Add-Ins ribbon, a hotkey, or a programmed mouse button. In Settings you can change the default box size and 3D view name."
 - "Get notified about new apps": heading, email box and button grouped together on the left.
 - Footer: © 2026 ClickTo3D · clickto3d@gmail.com · Autodesk App Store (publisher profile) · one "Privacy" link → `/privacy`.
-- SEO: home has JSON-LD (Organization, WebSite, SoftwareApplication) + og:site_name; each page has its own description, self-canonical with trailing slash for folder pages (`/privacy-policy/`), sitemap uses the same. Update sitemap `lastmod` when a page changes.
+- SEO: home has JSON-LD (Organization, WebSite, one SoftwareApplication per add-in) + og:site_name; each page has its own description, self-canonical with trailing slash for folder pages (`/privacy-policy/`), sitemap uses the same. Update sitemap `lastmod` when a page changes.
 - Privacy section 5 says only: we collect the email you enter; unsubscribe by writing to clickto3d@gmail.com. Never mention Google Sheets or who can access data.
 
 ## Email sign-up ("Notify me")

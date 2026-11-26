@@ -17,6 +17,7 @@ The short rules for Claude live in `/CLAUDE.md` at the repo root; this file is t
 | HTTPS | ✅ Certificate active, **Enforce HTTPS** ticked |
 | `www.clickto3d.com` | ✅ CNAME → `shiduchim.github.io` (GitHub redirects to bare domain) |
 | Privacy policy | ✅ https://clickto3d.com/privacy-policy (matches Autodesk listing) |
+| ClickToSection on home page | ✅ Nov 26 — equal main product section under ClickTo3D, links to its listing: https://marketplace.autodesk.com/apps/6b952ef1-09b6-43fa-8c2a-86a231e1e734?priceId=ba0c6133-6d43-480c-9b76-529bf7c9b9df |
 | Privacy list page | ✅ https://clickto3d.com/privacy — single footer link, lists ClickTo3D / ClickToSection / ClickPrint |
 | ClickPrint policy | ✅ https://clickto3d.com/clickprint/privacy-policy (for the ClickPrint listing; help planned at `/clickprint/help`) |
 | SEO (Nov 25) | ✅ JSON-LD, own descriptions, trailing-slash canonicals, sitemap resubmitted (5 pages), indexing requested for /, /privacy, /privacy-policy/, /clickprint/privacy-policy/ |
@@ -39,7 +40,8 @@ Also in this repo (added later in a separate session): `clicktosection/` — pri
 | Sign-up data | Private Google Sheet "ClickTo3D sign-ups" in **clickto3d@gmail.com**, tab `Signups` |
 | Sign-up backend | Apps Script bound to that sheet (code copy in `_project/backend/`) |
 | Search | Google Search Console, domain property `clickto3d.com` (clickto3d@gmail.com) |
-| Product listing | https://marketplace.autodesk.com/apps/c0fd3725-27a5-4e44-8148-366f50634eae?priceId=07099ece-b33a-4eb6-adb0-7833f87040a1 |
+| ClickToSection listing | https://marketplace.autodesk.com/apps/6b952ef1-09b6-43fa-8c2a-86a231e1e734?priceId=ba0c6133-6d43-480c-9b76-529bf7c9b9df |
+| ClickTo3D listing | https://marketplace.autodesk.com/apps/c0fd3725-27a5-4e44-8148-366f50634eae?priceId=07099ece-b33a-4eb6-adb0-7833f87040a1 |
 | Support email | clickto3d@gmail.com |
 
 Tip for the sheet: bookmark it with `?authuser=clickto3d@gmail.com` added to the URL so it always opens in the
