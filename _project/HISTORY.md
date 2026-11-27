@@ -119,6 +119,18 @@ Refinements to C, in order:
   (8.7KB → 0.9KB); all policies now "Last updated: D Month YYYY". Hero sentence now names "ClickTo3D … Revit add-in".
 - Search Console: sitemap shows 5 pages; indexing requested for the main pages.
 
+## 6c. ClickToSection live, speed check (Nov 26–27, 2026)
+
+- ClickToSection went live on the Autodesk App Store. First try added it as a small "Also from ClickTo3D" card; owner
+  said no — both are **main products**. Rebuilt as a second full hero section with the same layout, filled button,
+  badge and ribbon bar. Heading "Plan to section. / Click and pull." at 68px (76px wrapped to two lines).
+- Graphic: `clicktosection-og.jpg` cropped (title removed, equal margins) → `clicktosection-2d-to-section.jpg`.
+- Owner confirmed both add-ins are free → "Get it free…", "Free ·", JSON-LD offer price 0 for both. Sitemap lastmod updated.
+- Owner asked to block Iran, hostile Arab countries and Russia → explained it needs Cloudflare (not GitHub / Jetserver
+  DNS); not done yet, see HANDOFF to-dos.
+- Speed: PageSpeed Insights mobile 100/100/100/100 (LCP 1.2 s, CLS 0). Possible phone-sized images would save only
+  ~0.1 s — left as is.
+
 ## 7. Related projects (not in this repo)
 
 - **ClickCRM** — private sales CRM (GitHub Pages frontend + Apps Script/Sheets backend in clickto3d@gmail.com,

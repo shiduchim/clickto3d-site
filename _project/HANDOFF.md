@@ -9,7 +9,7 @@ The short rules for Claude live in `/CLAUDE.md` at the repo root; this file is t
 
 ---
 
-## 1. Current state (Nov 25, 2026)
+## 1. Current state (Nov 27, 2026)
 
 | Item | Status |
 |---|---|
@@ -18,6 +18,8 @@ The short rules for Claude live in `/CLAUDE.md` at the repo root; this file is t
 | `www.clickto3d.com` | ✅ CNAME → `shiduchim.github.io` (GitHub redirects to bare domain) |
 | Privacy policy | ✅ https://clickto3d.com/privacy-policy (matches Autodesk listing) |
 | ClickToSection on home page | ✅ Nov 26 — equal main product section under ClickTo3D, links to its listing: https://marketplace.autodesk.com/apps/6b952ef1-09b6-43fa-8c2a-86a231e1e734?priceId=ba0c6133-6d43-480c-9b76-529bf7c9b9df |
+| Speed (Nov 27) | ✅ PageSpeed Insights mobile: 100 Performance / 100 Accessibility / 100 Best Practices / 100 SEO. LCP 1.2 s, CLS 0, page ≈ 186 KB. Nothing to change. |
+| Country blocking | ❌ Not set up — owner asked (Iran, hostile Arab countries, Russia). Needs Cloudflare; see to-dos. |
 | Privacy list page | ✅ https://clickto3d.com/privacy — single footer link, lists ClickTo3D / ClickToSection / ClickPrint |
 | ClickPrint policy | ✅ https://clickto3d.com/clickprint/privacy-policy (for the ClickPrint listing; help planned at `/clickprint/help`) |
 | SEO (Nov 25) | ✅ JSON-LD, own descriptions, trailing-slash canonicals, sitemap resubmitted (5 pages), indexing requested for /, /privacy, /privacy-policy/, /clickprint/privacy-policy/ |
@@ -26,8 +28,8 @@ The short rules for Claude live in `/CLAUDE.md` at the repo root; this file is t
 | Old Google Sites page | To unpublish (nothing points to it anymore) |
 | Test rows in sign-up sheet | To delete (`asdf@aol.com`) |
 
-Also in this repo (added later in a separate session): `clicktosection/` — privacy policy and favicon for the
-**ClickToSection** add-in, plus `images/clicktosection-og.jpg`. Not covered in detail here.
+`clicktosection/` holds the ClickToSection privacy policy and favicon; `images/clicktosection-og.jpg` is its original
+graphic (with title) and `images/clicktosection-2d-to-section.jpg` the cropped version used on the home page.
 
 ---
 
@@ -80,6 +82,8 @@ If GitHub's DNS check is stuck: Settings → Pages → Remove domain → re-add 
 | `privacy.html` | Privacy list page at `/privacy` (single footer link) → ClickTo3D, ClickToSection, ClickPrint policies. |
 | `clickprint/privacy-policy/index.html` | ClickPrint privacy policy (URL used in its Autodesk listing — never move it). |
 | `images/clickto3d-2d-to-3d.jpg` | Hero graphic, 1400px wide, ~95 KB. Title area cropped off; equal top/bottom margins. |
+| `images/clicktosection-2d-to-section.jpg` | ClickToSection graphic, 1400×580, ~74 KB, cropped from `clicktosection-og.jpg` the same way (lazy-loaded). |
+| `clicktosection/privacy-policy/index.html` | ClickToSection privacy policy (URL used in its Autodesk listing — never move it). |
 | `favicon.svg` | Logo (light colors). |
 | `sitemap.xml`, `robots.txt` | For search engines. Update `lastmod` in sitemap when pages change. |
 | `CNAME` | `clickto3d.com` — don't delete or the custom domain breaks. |
@@ -107,6 +111,16 @@ If the browser shows the old version: Ctrl + F5 or incognito.
 drawn at real proportions (icon, "ClickTo3D", small centered ▼, ribbon-grey background), right cell =
 "Launch from the Add-Ins ribbon, a hotkey, or a programmed mouse button. / In Settings you can change the default
 box size and 3D view name."
+
+**ClickToSection section** (below ClickTo3D, after a thin line; same layout — it is an equal main product, not a
+secondary box):
+- H2 styled like the H1: "Plan to section." / "Click and pull." (68px so it stays on one line; 44px on phones)
+- "ClickToSection is a free Revit add-in. Click a point in a plan, pull the mouse the way you want to look, and a section opens right there."
+- Same filled button "Get it free on Autodesk App Store" → ClickToSection listing, Approved badge, "Free · Revit 2024 · 2025 · 2026 · 2027"
+- Right: cropped plan→section graphic; ribbon bar with the bracket-and-triangle icon, "ClickToSection", ▼ +
+  "Launch from the Add-Ins ribbon. Esc or right-click cancels. / In Settings you can change the section size, units and the direction marker."
+
+Page title: "ClickTo3D — Plan to 3D and plan to section for Revit"; description names both free add-ins.
 
 **Get notified about new apps:** "One email when something new is released." + email box + "Notify me" (outlined
 slate, like the add-in's Save button), grouped on the left.
@@ -177,6 +191,13 @@ The owner deliberately does **not** want to mention Google Sheets, who has acces
 
 ## 9. Open to-dos
 
+- [ ] Search Console: URL Inspection → `https://clickto3d.com/` → Request indexing (home page changed Nov 26 to show ClickToSection).
+- [ ] Country blocking (owner asked Nov 27: Iran, hostile Arab countries, Russia). GitHub Pages can't do it; Jetserver DNS
+      can't either (visitors never pass through it). Plan: free Cloudflare account (clickto3d@gmail.com) → add
+      clickto3d.com → check imported DNS records (4 GitHub A records, `www` CNAME, Google TXT) → switch nameservers at
+      Jetserver → Security → WAF custom rule "Country is in {list} → Block". SSL mode Full. Owner must send the exact
+      country list. Owner was going to ask Jetserver support first whether they offer a country-blocking proxy.
+      Note: VPNs bypass it; doesn't affect Autodesk listings or Google crawling.
 - [ ] Add `https://clickto3d.com` as Website on the Autodesk publisher profile (strongest fix for Google auto-correcting "clickto3d" → "click 3d"). Also GitHub repo Website field, LinkedIn etc.
 - [ ] ClickPrint help page at `/clickprint/help` (when owner sends content).
 - [ ] Optional (need owner OK): custom 404 page; dark-mode favicon; 1200×630 og image; phone-readable hero graphic captions.
